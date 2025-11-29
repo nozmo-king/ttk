@@ -3,35 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Terminal Knot</title>
+    <title>THE TERMINAL KNOT</title>
     <style>
+        /* The CSS is for the S22 Ultra / Modern Browsers */
+        :root { --bg: #000; --fg: #e0e0e0; }
         body {
-            font-family: monospace;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            background: var(--bg); color: var(--fg);
+            font-family: 'Times New Roman', serif; /* Brutal serif for modern browsers */
+            margin: 0; padding: 2rem;
+            line-height: 1.1;
         }
-        a {
-            color: inherit;
+        pre {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #fff;
+            overflow-x: auto;
+            margin-bottom: 2rem;
         }
-        .links {
-            margin-top: 40px;
-            border-top: 1px solid #333;
-            padding-top: 20px;
-        }
-        .links a {
-            margin-right: 20px;
-        }
+        h1, h2 { text-transform: uppercase; letter-spacing: -2px; }
+        .big-text { font-size: 4rem; font-weight: 900; word-break: break-word; }
+        a { color: #fff; text-decoration: none; border-bottom: 3px solid #fff; }
+        a:hover { background: #fff; color: #000; }
+        
+        /* ASCII/Lynx optimization */
+        .u-screen-reader-only { display: none; } 
     </style>
 </head>
 <body>
-    <h1>The Terminal Knot</h1>
-    <p>Welcome to The Terminal Knot.</p>
-    
-    <div class="links">
-        <a href="contact.html">contact</a>
-        <a href="submit.html">submit</a>
+
+<pre>
+████████╗████████╗██╗  ██╗
+╚══██╔══╝╚══██╔══╝██║ ██╔╝
+   ██║      ██║   █████╔╝ 
+   ██║      ██║   ██╔═██╗ 
+   ██║      ██║   ██║  ██╗
+   ╚═╝      ╚═╝   ╚═╝  ╚═╝
+THE TERMINAL KNOT
+</pre>
+
+    <div class="big-text">
+        ENTROPY.<br>
+        ARCHIVAL.<br>
+        STASIS.
     </div>
+
+    <p style="font-size: 1.5rem; max-width: 600px; margin-top: 2rem;">
+        You have located the <strong>interstice</strong>. This is a non-algorithmic aggregation of static web artifacts. We reject the infinite scroll in favor of the finite loop.
+    </p>
+
+    <hr style="border: 2px solid #fff; margin: 3rem 0;">
+
+    <nav style="font-size: 2rem; font-weight: bold;">
+        [ <a href="submit.html">SUBMIT PROTOCOL</a> ]<br><br>
+        [ <a href="contact.html">SIGNAL ADMIN</a> ]
+    </nav>
+
 </body>
 </html>
