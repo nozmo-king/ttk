@@ -23,3 +23,41 @@ THE TERMINAL KNOT is a webring celebrating the simplicity and accessibility of t
 
 - Email: jcb@slime.tel
 - XMPP: blural@xmpp.jp
+
+## Nomos prototype code
+
+This repository now includes a runnable prototype module for Nomos design primitives:
+
+- `nomos_proto.py`
+- `tests/test_nomos_proto.py`
+
+Run tests with:
+
+```bash
+python -m unittest discover -s tests -p 'test_*.py'
+```
+
+## Nomos executable blockchain
+
+This repository includes an executable toy blockchain implementation:
+
+- `nomos_chain.py` (CLI blockchain executable)
+- `nomos_proto.py` (support primitives: radio envelope, WoT scoring, PoW personalization, swap templates)
+- `tests/test_nomos_chain.py`
+- `tests/test_nomos_proto.py`
+
+### Quick start
+
+```bash
+python nomos_chain.py init --path ./nomos_chain.json --difficulty 2 --force
+python nomos_chain.py submit-tx --path ./nomos_chain.json --sender genesis --recipient alice --amount 500
+python nomos_chain.py mine --path ./nomos_chain.json --miner miner1
+python nomos_chain.py validate --path ./nomos_chain.json
+python nomos_chain.py show --path ./nomos_chain.json
+```
+
+### Run tests
+
+```bash
+python -m unittest discover -s tests -p 'test_*.py'
+```
